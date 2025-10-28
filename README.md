@@ -111,11 +111,25 @@ REACT_APP_BACKEND_URL=http://localhost:8001
 ## 🚀 Cara Menggunakan
 
 1. Buka browser dan akses `http://localhost:3000`
-2. Register akun baru atau login
+2. Login dengan akun default:
+   - **Username**: `admin`
+   - **Password**: `admin123`
 3. Buat kategori untuk mengorganisir dokumen
 4. Upload dokumen dengan judul, kategori, dan tags
 5. Gunakan fitur search untuk mencari dokumen
 6. Download atau edit dokumen sesuai kebutuhan
+
+## 👤 Akun Default
+
+- **Email**: admin@docflow.com
+- **Username**: admin
+- **Password**: admin123
+
+Untuk membuat akun admin secara manual, jalankan:
+```bash
+cd backend
+python create_admin.py
+```
 
 ## 📝 Catatan
 
