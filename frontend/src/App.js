@@ -60,13 +60,21 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Toaster position="top-right" />
         <Routes>
-          <Route path="/login" element={user ? <Navigate to="/" /> : <Login onLogin={handleLogin} />} />
-          <Route path="/register" element={user ? <Navigate to="/" /> : <Register onLogin={handleLogin} />} />
-          <Route path="/" element={user ? <Dashboard user={user} onLogout={handleLogout} /> : <Navigate to="/login" />} />
+          <Route path="/login" element={<Login onLogin={handleLogin} />} />
+          <Route
+            path="/"
+            element={
+              user ? (
+                <Dashboard user={user} onLogout={handleLogout} />
+              ) : (
+                <Navigate to="/login" />
+              )
+            }
+          />
         </Routes>
       </BrowserRouter>
-      <Toaster position="top-right" />
     </div>
   );
 }

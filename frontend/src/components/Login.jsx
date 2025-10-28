@@ -83,21 +83,13 @@ export default function Login({ onLogin }) {
                   />
                 </div>
               </div>
-              <Button
-                type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-lg transition-colors"
-                disabled={loading}
-                data-testid="login-submit-button"
-              >
-                {loading ? "Memproses..." : "Masuk"}
+              <Button type="submit" className="w-full" disabled={loading}>
+                {loading ? "Logging in..." : "Login"}
               </Button>
             </form>
-            <div className="mt-4 text-center text-sm">
-              <span className="text-gray-600">Belum punya akun? </span>
-              <Link to="/register" className="text-blue-600 hover:text-blue-700 font-medium" data-testid="register-link">
-                Daftar sekarang
-              </Link>
-            </div>
+            <p className="text-center text-sm text-gray-600 mt-4">
+              Default account: <strong>admin</strong> / <strong>admin123</strong>
+            </p>
           </CardContent>
         </Card>
       </div>
